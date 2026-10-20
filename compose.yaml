@@ -1,6 +1,9 @@
 # Ambiente di sviluppo locale, stesso schema wodby dei progetti units112.
 #   cp example.env .env && docker compose up -d
 #   http://localhost:${PROJECT_PORT}
+# Nome fisso: i volumi (database) non dipendono dal nome della cartella.
+name: units-grafica
+
 services:
   database:
     image: wodby/mariadb:$MARIADB_TAG
