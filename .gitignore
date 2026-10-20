@@ -1,9 +1,3 @@
-/vendor/
-/web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
-/web/libraries/
 /web/sites/*/files/
 /web/sites/*/settings.local.php
 /web/sites/*/services.local.yml
@@ -11,5 +5,3 @@
 /.env
 /reference/
 .DS_Store
-# Generati da drush site:install, contengono credenziali e hash_salt.
-/web/sites/*/settings.php

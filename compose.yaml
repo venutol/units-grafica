@@ -23,6 +23,7 @@ services:
       DB_NAME: $DB_NAME
       DB_USER: $DB_USER
       DB_PASSWORD: $DB_PASSWORD
+      DRUPAL_HASH_SALT: $DRUPAL_HASH_SALT
       DRUSH_OPTIONS_URI: http://localhost:${PROJECT_PORT}
     volumes:
       - ./:/var/www/html:cached

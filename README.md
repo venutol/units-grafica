@@ -60,9 +60,16 @@ Richiede `ut_gc` (tema base); il modulo `ut_gc_setup` non serve.
 
 ## Ambiente locale
 
+Il repo contiene tutto, core, `vendor` e contrib compresi, come negli altri progetti:
+rollback e deploy sono un checkout, senza `composer install`. `settings.php` è
+versionato ma senza segreti: database e `hash_salt` arrivano dalle variabili
+d'ambiente (file `.env`, escluso da git).
+
 ```bash
 cp example.env .env
 ```
+
+In `.env` va impostato `DRUPAL_HASH_SALT` (il comando per generarlo è nel file).
 
 ```bash
 docker compose up -d
