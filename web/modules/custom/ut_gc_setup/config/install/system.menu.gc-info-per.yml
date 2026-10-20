@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-info-per
+label: 'Grafica coordinata: Info per'
+description: "Menu a tendina in alto a sinistra nell'header."
+locked: false

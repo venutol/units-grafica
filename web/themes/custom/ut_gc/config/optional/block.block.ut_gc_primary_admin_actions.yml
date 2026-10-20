@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  theme:
+    - ut_gc
+id: ut_gc_primary_admin_actions
+theme: ut_gc
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Azioni di amministrazione principali'
+  label_display: '0'
+  provider: core
+visibility: {  }
+

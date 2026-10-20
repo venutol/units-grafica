@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-contatti
+label: 'Grafica coordinata: footer contatti'
+description: "Footer, prima riga di link."
+locked: false

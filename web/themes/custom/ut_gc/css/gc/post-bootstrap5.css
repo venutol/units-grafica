@@ -1,0 +1,66 @@
+.clearfix::before, .clearfix::after {
+  content: inherit;
+  display: block;
+}
+
+tr {
+ border: 0;
+ background: transparent;
+}
+
+td {
+  padding: .5em;
+  border: 1px solid #ddd;
+  border-color: #ddd !important;
+}
+
+#contenuto-intestazione {
+  margin-top: 20px;
+}
+
+.colorBlu-Units {
+  font-size: 22px;
+  line-height: 1;
+  transform: translateY(3px);
+}
+
+.main .container .main-content {
+  background-color: #ffffff;
+}
+
+.form-item label {
+  display: block;
+  font-weight: 700;
+}
+
+input[type="text"], input[type="email"], textarea {
+  border-radius: 0;
+  border: 2px solid #d4d0bc;
+  color: #333;
+  background-color: #fafafa;
+  padding: 4px 8px;
+}
+
+.form-select,
+select {
+  height: inherit;
+  line-height: 19px;
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border: 2px solid #d4d0bc;
+  color: #333;
+  background-color: #fafafa;
+  box-shadow: none;
+  padding: 4px 8px;
+}
+
+.views-row {
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.node--type-agr-inst .clearfix::after, .node--type-agr-inst .clearfix::before {
+  display: table;
+  content: " ";
+}

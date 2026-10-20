@@ -1,0 +1,9 @@
+name: 'UniTS Grafica coordinata: menu'
+type: module
+description: 'Crea i menu di header e footer del tema ut_gc e li popola con i link attuali della grafica coordinata.'
+package: UniTS
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - drupal:menu_link_content
+  - drupal:menu_ui
+  - link_attributes:link_attributes_menu_link_content

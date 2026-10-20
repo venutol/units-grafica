@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Grafica coordinata UniTS, variante Lite.
+ *
+ * Header: fascia blu con il logo. Footer: logo e indirizzo, più la regione
+ * "footer" dove ogni sito mette i blocchi che vuole. Impostazioni, CSS e
+ * funzioni di supporto vengono dal tema base ut_gc.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_theme().
+ */
+function ut_gc_lite_theme($existing, $type, $theme, $path) {
+  return [
+    'ut_gc_lite_header' => [
+      'variables' => ['gc' => [], 'region' => []],
+      'template' => 'partials/ut-gc-lite-header',
+    ],
+    'ut_gc_lite_footer' => [
+      'variables' => ['gc' => [], 'region' => []],
+      'template' => 'partials/ut-gc-lite-footer',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Il page.html.twig del tema base stampa gc_header e gc_footer: qui li
+ * sostituiamo con le versioni Lite.
+ */
+function ut_gc_lite_preprocess_page(array &$variables) {
+  $cache = new CacheableMetadata();
+  $cache->addCacheTags(['config:ut_gc_lite.settings']);
+  $gc = _ut_gc_settings($cache);
+
+  $variables['gc_header'] = [
+    '#theme' => 'ut_gc_lite_header',
+    '#gc' => $gc,
+    '#region' => $variables['page']['header'] ?? [],
+  ];
+  $variables['gc_footer'] = [
+    '#theme' => 'ut_gc_lite_footer',
+    '#gc' => $gc,
+    '#region' => $variables['page']['footer'] ?? [],
+  ];
+  $cache->applyTo($variables['gc_header']);
+  $cache->applyTo($variables['gc_footer']);
+}

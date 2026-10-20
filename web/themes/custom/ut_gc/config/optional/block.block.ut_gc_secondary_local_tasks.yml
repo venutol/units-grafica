@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  theme:
+    - ut_gc
+id: ut_gc_secondary_local_tasks
+theme: ut_gc
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Schede secondarie'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }
+

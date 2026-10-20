@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ut_gc_lite
+id: ut_gc_lite_help
+theme: ut_gc_lite
+region: content
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aiuto
+  label_display: '0'
+  provider: help
+visibility: {  }
+

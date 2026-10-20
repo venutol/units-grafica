@@ -1,0 +1,18 @@
+langcode: it
+status: true
+dependencies:
+  theme:
+    - ut_gc_lite
+id: ut_gc_lite_page_title
+theme: ut_gc_lite
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titolo della pagina'
+  label_display: '0'
+  provider: core
+visibility: {  }
+

@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ut_gc
+id: ut_gc_content
+theme: ut_gc
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenuto della pagina principale'
+  label_display: '0'
+  provider: system
+visibility: {  }
+

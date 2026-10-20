@@ -1,0 +1,5 @@
+# Il client mysql dell'immagine wodby richiede TLS, MariaDB locale non lo offre.
+command:
+  sql:
+    options:
+      extra: '--skip-ssl'

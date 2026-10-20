@@ -1,0 +1,47 @@
+.btn-info,
+.node__content .btn-info {
+  background-color: #607D91;
+  border-color: #4c6372;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+}
+
+.btn:first-child:active {
+  background-color: #607D91;
+}
+
+.btn-info:hover,
+.layout-main-wrapper a.btn-info:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*
+* underscore continui senza a capo
+* rompono le colonne
+*/
+.node__content {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+img {
+  width: inherit;
+}
+
+.image-style-thumbnail {
+  max-width: 100%;
+  width: inherit;
+}
+
+.site-footer__bottom .white img {
+  width: 100%;
+}
+
+@media (max-width: 30em) {
+  .site-footer__bottom .menu--quick-links .clearfix.nav li:first-child {
+    padding-right: 0;
+  }
+}

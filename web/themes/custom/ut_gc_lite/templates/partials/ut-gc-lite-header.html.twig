@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Header Lite: fascia blu con il logo e, a destra, la regione "header".
+ *
+ * Variabili:
+ * - gc: impostazioni del tema (vedi _ut_gc_settings() in ut_gc.theme).
+ * - region: blocchi della regione header.
+ */
+#}
+{% set logo %}<img src="{{ gc.logo }}" alt="{{ gc.logo_alt }}"{% if gc.logo_width %} width="{{ gc.logo_width }}"{% endif %}{% if gc.logo_height %} height="{{ gc.logo_height }}"{% endif %}>{% endset %}
+{% set region_html = region|render %}
+<header class="gc-lite-header" role="banner">
+  <div class="container gc-lite-header__inner">
+    {% if gc.logo_url %}
+      <a class="gc-lite-header__logo" href="{{ gc.logo_url }}"{% if gc.logo_title %} title="{{ gc.logo_title }}"{% endif %} rel="home">{{ logo }}</a>
+    {% else %}
+      <span class="gc-lite-header__logo">{{ logo }}</span>
+    {% endif %}
+    {% if region_html|striptags('<img><input><button><drupal-render-placeholder>')|trim %}
+      <div class="gc-lite-header__region">{{ region_html }}</div>
+    {% endif %}
+  </div>
+</header>

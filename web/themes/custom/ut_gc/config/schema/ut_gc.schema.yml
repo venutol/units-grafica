@@ -1,0 +1,47 @@
+ut_gc.settings:
+  type: bootstrap_barrio.settings
+  label: 'Impostazioni UniTS Grafica coordinata statica'
+  mapping:
+    gc_lite:
+      type: boolean
+      label: 'Variante Lite'
+    gc_logo_link:
+      type: string
+      label: 'Destinazione del link del logo: front, custom o none'
+    gc_logo_url:
+      type: string
+      label: 'Link del logo'
+    gc_logo_title:
+      type: label
+    gc_logo_alt:
+      type: label
+    gc_logo_width:
+      type: integer
+    gc_logo_height:
+      type: integer
+    gc_info_per_label:
+      type: label
+    gc_language_switcher:
+      type: boolean
+    gc_search_enabled:
+      type: boolean
+    gc_search_action:
+      type: string
+    gc_search_param:
+      type: string
+    gc_search_placeholder:
+      type: label
+    gc_search_links:
+      type: text
+    gc_footer_logo_path:
+      type: string
+    gc_footer_logo_alt:
+      type: label
+    gc_footer_address:
+      type: text_format
+    gc_anvur_enabled:
+      type: boolean
+    gc_anvur_label:
+      type: label
+    gc_anvur_url:
+      type: string

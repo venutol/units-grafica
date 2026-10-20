@@ -1,0 +1,288 @@
+<?php
+
+/**
+ * @file
+ * Grafica coordinata UniTS statica.
+ *
+ * Header e footer riproducono il markup del JSON della grafica coordinata
+ * (stessi id e classi, quindi gli stessi CSS di units_base), ma i contenuti
+ * arrivano da Drupal: impostazioni del tema per logo, etichette e testi,
+ * menu per i link. Nessuna richiesta verso gc.units.it.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Url;
+
+/**
+ * Menu usati da header e footer, chiave => machine name del menu.
+ */
+const UT_GC_MENUS = [
+  'info_per' => 'gc-info-per',
+  'servizio' => 'gc-servizio',
+  'main' => 'main',
+  'social' => 'gc-social',
+  'contatti' => 'gc-contatti',
+  'organizzazione' => 'gc-organizzazione',
+  'riferimenti' => 'gc-riferimenti',
+  'portale' => 'gc-portale',
+  'quicklinks' => 'gc-quicklinks',
+];
+
+/**
+ * Icone dei social (bianche, in icons/social), riconosciute dal dominio del link.
+ */
+const UT_GC_SOCIAL_ICONS = [
+  'instagram.com' => 'instagram.svg',
+  'facebook.com' => 'facebook.svg',
+  'linkedin.com' => 'linkedin.svg',
+  'youtube.com' => 'youtube.svg',
+  'twitter.com' => 'x.svg',
+  'x.com' => 'x.svg',
+  'threads.net' => 'threads.svg',
+  'threads.com' => 'threads.svg',
+  'tiktok.com' => 'tiktok.svg',
+  't.me' => 'telegram.svg',
+  'telegram.me' => 'telegram.svg',
+];
+
+/**
+ * Implements hook_theme().
+ */
+function ut_gc_theme($existing, $type, $theme, $path) {
+  return [
+    'ut_gc_header' => [
+      'variables' => [
+        'gc' => [],
+        'menus' => [],
+        'language_links' => NULL,
+        'regions' => [],
+      ],
+      'template' => 'partials/ut-gc-header',
+    ],
+    'ut_gc_footer' => [
+      'variables' => [
+        'gc' => [],
+        'menus' => [],
+      ],
+      'template' => 'partials/ut-gc-footer',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function ut_gc_preprocess_page(array &$variables) {
+  // La variante Lite (sottotema ut_gc_lite) costruisce header e footer suoi.
+  if (theme_get_setting('gc_lite')) {
+    return;
+  }
+
+  $cache = new CacheableMetadata();
+  $cache->addCacheTags(['config:ut_gc.settings']);
+
+  $menus = [];
+  foreach (UT_GC_MENUS as $key => $menu_name) {
+    $menus[$key] = _ut_gc_menu_items($menu_name, $cache);
+  }
+  foreach ($menus['social'] as &$item) {
+    $item['icon'] = _ut_gc_social_icon($item['href']);
+  }
+  unset($item);
+
+  $gc = _ut_gc_settings($cache);
+
+  $language_links = NULL;
+  if ($gc['language_switcher'] && \Drupal::languageManager()->isMultilingual()) {
+    $language_links = _ut_gc_language_links($cache);
+  }
+
+  $variables['gc_header'] = [
+    '#theme' => 'ut_gc_header',
+    '#gc' => $gc,
+    '#menus' => $menus,
+    '#language_links' => $language_links,
+    // Regioni opzionali per blocchi aggiuntivi dentro l'header.
+    '#regions' => [
+      'top_header' => $variables['page']['top_header'] ?? [],
+      'top_header_form' => $variables['page']['top_header_form'] ?? [],
+      'header' => $variables['page']['header'] ?? [],
+      'header_form' => $variables['page']['header_form'] ?? [],
+    ],
+  ];
+  $variables['gc_footer'] = [
+    '#theme' => 'ut_gc_footer',
+    '#gc' => $gc,
+    '#menus' => $menus,
+  ];
+  $cache->applyTo($variables['gc_header']);
+  $cache->applyTo($variables['gc_footer']);
+}
+
+/**
+ * Raccoglie le impostazioni del tema in un array per i template.
+ *
+ * @param \Drupal\Core\Cache\CacheableMetadata $cache
+ *   Raccoglie la cacheability degli URL generati (link del logo).
+ */
+function _ut_gc_settings(CacheableMetadata $cache): array {
+  $theme_path = \Drupal::service('extension.list.theme')->getPath('ut_gc');
+  $base = base_path();
+
+  $logo = theme_get_setting('logo.url') ?: $base . $theme_path . '/logo.svg';
+
+  $footer_logo = theme_get_setting('gc_footer_logo_path');
+  $footer_logo = $footer_logo
+    ? \Drupal::service('file_url_generator')->generateString($footer_logo)
+    : $base . $theme_path . '/images/logo_footer.svg';
+
+  $search_links = [];
+  foreach (preg_split('/\R/', (string) theme_get_setting('gc_search_links')) as $line) {
+    [$label, $href] = array_map('trim', explode('|', $line, 2)) + [1 => ''];
+    if ($label !== '' && $href !== '') {
+      $search_links[] = ['label' => $label, 'href' => $href];
+    }
+  }
+
+  $address = theme_get_setting('gc_footer_address') ?: [];
+
+  // Link del logo: home del sito, indirizzo scelto o nessun link.
+  $logo_url = '';
+  switch (theme_get_setting('gc_logo_link') ?: 'custom') {
+    case 'front':
+      $generated = Url::fromRoute('<front>')->toString(TRUE);
+      $cache->addCacheableDependency($generated);
+      $logo_url = $generated->getGeneratedUrl();
+      break;
+
+    case 'custom':
+      $logo_url = (string) theme_get_setting('gc_logo_url');
+      break;
+  }
+
+  return [
+    'theme_path' => $base . $theme_path,
+    'logo' => $logo,
+    'logo_url' => $logo_url,
+    'logo_title' => theme_get_setting('gc_logo_title'),
+    'logo_alt' => theme_get_setting('gc_logo_alt'),
+    'logo_width' => theme_get_setting('gc_logo_width'),
+    'logo_height' => theme_get_setting('gc_logo_height'),
+    'info_per_label' => theme_get_setting('gc_info_per_label'),
+    'language_switcher' => (bool) theme_get_setting('gc_language_switcher'),
+    'search_enabled' => (bool) theme_get_setting('gc_search_enabled'),
+    'search_action' => theme_get_setting('gc_search_action'),
+    'search_param' => theme_get_setting('gc_search_param') ?: 'q',
+    'search_placeholder' => theme_get_setting('gc_search_placeholder'),
+    'search_links' => $search_links,
+    'footer_logo' => $footer_logo,
+    'footer_logo_alt' => theme_get_setting('gc_footer_logo_alt'),
+    'footer_address' => [
+      '#type' => 'processed_text',
+      '#text' => $address['value'] ?? '',
+      '#format' => $address['format'] ?? 'basic_html',
+    ],
+    'anvur_enabled' => (bool) theme_get_setting('gc_anvur_enabled'),
+    'anvur_label' => theme_get_setting('gc_anvur_label'),
+    'anvur_url' => theme_get_setting('gc_anvur_url'),
+  ];
+}
+
+/**
+ * Carica i link di primo livello (con figli) di un menu, controllando l'accesso.
+ *
+ * Ogni voce porta le attributes impostate sul link (classe, target, rel, title
+ * gestibili da interfaccia con il modulo link_attributes).
+ */
+function _ut_gc_menu_items(string $menu_name, CacheableMetadata $cache, ?MenuTreeParameters $parameters = NULL): array {
+  $cache->addCacheTags(['config:system.menu.' . $menu_name]);
+
+  $menu_tree = \Drupal::menuTree();
+  $parameters ??= (new MenuTreeParameters())->setMaxDepth(2)->onlyEnabledLinks();
+  $tree = $menu_tree->load($menu_name, $parameters);
+  $tree = $menu_tree->transform($tree, [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+  ]);
+
+  return _ut_gc_tree_to_items($tree, $cache);
+}
+
+/**
+ * Converte un albero di menu in un array semplice per i template.
+ */
+function _ut_gc_tree_to_items(array $tree, CacheableMetadata $cache): array {
+  $items = [];
+  foreach ($tree as $element) {
+    if ($element->access !== NULL) {
+      $cache->addCacheableDependency($element->access);
+    }
+    if (!$element->access || !$element->access->isAllowed()) {
+      continue;
+    }
+    $link = $element->link;
+    $url = $link->getUrlObject();
+    $generated = $url->toString(TRUE);
+    $cache->addCacheableDependency($generated);
+
+    $attributes = $url->getOption('attributes') ?? [];
+    $link_options = $link->getOptions();
+    if (!empty($link_options['attributes'])) {
+      $attributes = array_merge($attributes, $link_options['attributes']);
+    }
+
+    $items[] = [
+      'title' => $link->getTitle(),
+      'href' => $generated->getGeneratedUrl(),
+      'attributes' => $attributes,
+      'below' => $element->subtree ? _ut_gc_tree_to_items($element->subtree, $cache) : [],
+    ];
+  }
+  return $items;
+}
+
+/**
+ * Restituisce il file icona del tema per un link social, in base al dominio.
+ */
+function _ut_gc_social_icon(string $href): string {
+  $host = strtolower((string) parse_url($href, PHP_URL_HOST));
+  $host = preg_replace('/^(www|m)\./', '', $host);
+  $theme_path = base_path() . \Drupal::service('extension.list.theme')->getPath('ut_gc');
+  foreach (UT_GC_SOCIAL_ICONS as $domain => $file) {
+    if ($host === $domain || str_ends_with($host, '.' . $domain)) {
+      return $theme_path . '/icons/social/' . $file;
+    }
+  }
+  // Link interni (es. feed RSS) o domini non riconosciuti.
+  return $theme_path . '/icons/social/' . (str_contains($href, 'feed') || str_contains($href, 'rss') ? 'rss.svg' : 'link.svg');
+}
+
+/**
+ * Link per il cambio lingua della pagina corrente.
+ */
+function _ut_gc_language_links(CacheableMetadata $cache): array {
+  $cache->addCacheContexts(['languages:language_interface', 'url.path', 'url.query_args']);
+  $language_manager = \Drupal::languageManager();
+  $route_name = \Drupal::service('path.matcher')->isFrontPage() ? '<front>' : '<current>';
+  $switch = $language_manager->getLanguageSwitchLinks('language_interface', Url::fromRoute($route_name));
+  if (!$switch) {
+    return [];
+  }
+  $current = $language_manager->getCurrentLanguage()->getId();
+  $links = [];
+  foreach ($switch->links as $langcode => $link) {
+    $url = $link['url'] ?? Url::fromRoute('<front>');
+    $url->setOption('language', $link['language']);
+    $generated = $url->toString(TRUE);
+    $cache->addCacheableDependency($generated);
+    $links[] = [
+      'langcode' => $langcode,
+      'label' => ['it' => 'ITA', 'en' => 'ENG'][$langcode] ?? strtoupper($langcode),
+      'title' => $link['title'],
+      'href' => $generated->getGeneratedUrl(),
+      'active' => $langcode === $current,
+    ];
+  }
+  return $links;
+}

@@ -1,0 +1,82 @@
+/*
+ * da Bootstrap 3 a Bootstrap 5
+ * sr-only è statasostituita da visually-hidden.
+*/
+
+.menu-spalla .block-menu {
+  background-color: #f0f0f0;
+  box-shadow: none;
+  padding-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.menu-spalla .block-menu .nav-item {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin: 0rem 1rem;
+}
+
+.menu-spalla .block-menu .nav-item a {
+  display: block;
+  padding: 8px 0px 8px 0px;
+}
+
+.menu-spalla .block-menu .nav-item>a {
+  padding-left: 0.5rem;
+}
+.menu-spalla .block-menu a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #007185;
+}
+
+.menu-spalla .block-menu .nav-item.active > a.active:not(:has(+ ul li.active)) {
+  background-color: #ffffff;
+}
+
+
+.menu-spalla .block-menu h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.menu-spalla .block-menu h2 a {
+  color: #000;
+}
+
+.menu-spalla .block-menu h2 a:hover {
+  color: #000;
+}
+
+.navbar-toggler-icon.original {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+#block-units-base-navigazioneprincipale .navnavbar-nav::before {
+  content: unset;
+}
+
+.rtecenter {
+  text-align: center;  
+}
+
+span.nav-link {
+  color: #2e2d29;
+}
+
+.field--name-field-images img {
+  width: 100%
+}
+
+.breadcrumb {
+    font-size: 0.929em;
+}
+
+.site-footer {
+  margin-top: 20px;
+}

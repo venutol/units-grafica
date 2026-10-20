@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-servizio
+label: 'Grafica coordinata: menu di servizio'
+description: "Link in alto a destra nell'header (Rubrica, Accedi)."
+locked: false

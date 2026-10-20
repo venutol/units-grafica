@@ -1,0 +1,1153 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'html' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ html--themes--custom--units-base--icons--icon--arrow-right.svg.html.twig
+   ▪️ html--themes--custom--units-base--icons.html.twig
+   ▪️ html--themes--custom--units-base.html.twig
+   ▪️ html--themes--custom.html.twig
+   ▪️ html--themes.html.twig
+   ✅ html.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/html.html.twig' -->
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/units_base/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Pagina non trovata | www-units-it</title>
+    <link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/modules/contrib/ckeditor_accordion/css/accordion.frontend.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/variables.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/user.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/progress.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/libraries/bootstrap/dist/css/bootstrap.min.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/affix.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/book.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/contextual.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/feed-icon.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/field.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/header.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/help.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/icons.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/image-button.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/item-list.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/list-group.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/media.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/page.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/search-form.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/shortcut.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/sidebar.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/site-footer.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/skip-link.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/table.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tabledrag.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tableselect.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tablesort-indicator.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/ui.widget.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/tabs.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/toolbar.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/vertical-tabs.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/views.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/webform.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/contrib/bootstrap_barrio/css/components/ui-dialog.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/../themes/contrib/bootstrap_barrio/components/breadcrumb/breadcrumb.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/core/../themes/contrib/bootstrap_barrio/components/menu/menu.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/style.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/colors.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/sidebar.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/accordion.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/didattica-digitale.css?t7ctp0" />
+<link rel="stylesheet" media="print" href="/themes/contrib/bootstrap_barrio/css/print.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="https://portale.units.it/themes/custom/units_base/fonts/titillium-web.css?snn4oe" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/css/units.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/libraries/splide/dist/css/splide-core.min.css?t7ctp0" />
+<link rel="stylesheet" media="all" href="/themes/custom/units_base/libraries/splide/dist/css/themes/splide-default.min.css?t7ctp0" />
+
+    
+  </head>
+  <body class="layout-no-sidebars path-themes">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Salta al contenuto principale
+    </a>
+    
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ page--404.html.twig
+   ▪️ page--4xx.html.twig
+   ▪️ page--themes--custom--units-base--icons--icon--arrow-right.svg.html.twig
+   ▪️ page--themes--custom--units-base--icons.html.twig
+   ▪️ page--themes--custom--units-base.html.twig
+   ▪️ page--themes--custom.html.twig
+   ▪️ page--themes.html.twig
+   ✅ page.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/layout/page.html.twig' -->
+
+<div id="page-wrapper">
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+      	  <nav class="navbar" id="navbar-top">
+    <div class="container">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--secondary-menu.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region.html.twig' -->
+  <section class="row region region-secondary-menu">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--menutarget.html.twig
+   ✅ block--system-menu-block--menu-target.html.twig
+   ▪️ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--menu-target.html.twig' -->
+<nav role="navigation" aria-labelledby="block-menutarget-menu" id="block-menutarget" class="menu-target block block-menu navigation menu--menu-target d-none d-md-block">
+            
+  <h2 class="visually-hidden" id="block-menutarget-menu">Menu target</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_target' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ menu--menu-target.html.twig
+   ✅ menu--menu-target.html.twig
+   ▪️ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--menu-target.html.twig' -->
+<div class="dropdown">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Info per
+  </button>
+  
+                              <ul class="clearfix dropdown-menu">
+                            <li class="nav-item">
+                    <a href="https://portale.units.it/it/futuri-studenti" class="nav-link nav-link-https--portaleunitsit-it-futuri-studenti">Futuri studenti</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://portale.units.it/it/studenti-iscritti" class="nav-link nav-link-https--portaleunitsit-it-studenti-iscritti">Studenti iscritti</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://portale.units.it/it/post-lauream" class="nav-link nav-link-https--portaleunitsit-it-post-lauream">Post lauream</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://portale.units.it/it/enti-e-aziende" class="nav-link nav-link-https--portaleunitsit-it-enti-e-aziende">Enti e aziende</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://www.units.it/personale" class="nav-link nav-link-https--wwwunitsit-personale">Personale</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://portale.units.it/it/studenti-internazionali" class="nav-link nav-link-https--portaleunitsit-it-studenti-internazionali">Studenti Internazionali</a>
+                  </li>
+                      <li class="nav-item">
+                    <a href="https://portale.units.it/it/territorio-e-societa" class="nav-link nav-link-https--portaleunitsit-it-territorio-e-societa">Territorio e società</a>
+                  </li>
+            </ul>
+      
+
+  
+</div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--menu-target.html.twig' -->
+
+
+  </nav>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--menu-target.html.twig' -->
+
+
+  </section>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region.html.twig' -->
+
+
+            <button class="navbar-toggler collapsed btn-hamburger--close" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation" title="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="form-inline navbar-form ml-auto">
+        <section class="row region region-top-header-form">
+          <div class="invisible language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+            <div class="content">
+              <nav class="links nav links-inline" aria-label="Language selection menu"><span class="nav-link"><a href="/it" class="language-link is-active" aria-label="Italian language" title="Italiano" hreflang="it" data-drupal-link-system-path="&lt;front&gt;" aria-current="page">ITA</a></span><span class="nav-link"><a href="/en" class="language-link" aria-label="English language" title="English" hreflang="en" data-drupal-link-system-path="&lt;front&gt;">ENG</a></span></nav>
+            </div>
+          </div>
+          <nav role="navigation" aria-label="Menù di servizio" id="block-units-base-menudiservizio" class="menu--utility d-none d-lg-block block block-menu navigation menu--menu-di-servizio">
+            <ul class="clearfix nav">
+              <li class="nav-item d-none d-xl-block">
+                <button type="button" class="btn modal-btn white" data-bs-toggle="modal" data-bs-target="#ModalCenter" title="Cerca">
+                  <span class="visually-hidden">Cerca</span>
+                  <img src="/themes/custom/units_base/icons/lens_new.svg" alt="icona lente di ricerca" class="search__icon--white" aria-hidden="true">
+                </button>
+              </li>
+              <li class="nav-item">
+                <a href="//www.units.it/search/abook/" class="menu-servizi__mail nav-link nav-link-https--wwwunitsit-search-abook-" title="Vai al servizio rubrica" target="_blank" rel="noopener noreferrer">Rubrica</a>
+              </li>
+              <li class="nav-item">
+                <a href="//portale.units.it/it/servizi/servizi-digitali" class="accedi nav-link nav-link--it-servizi-servizi-digitali">ACCEDI</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="block-modalsearch" class="block-content-basic block block-block-content">
+            <div class="content">
+              <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                <div class="modal modal-search fade" role="dialog" aria-modal="true" tabindex="-1" id="ModalCenter" aria-labelledby="ModalCenterTitle">
+                    <div class="modal-dialog">
+                      <div class="modal-content container">
+                        <div class="modal-header">
+                          <span class="modal-title visually-hidden" id="ModalCenterTitle">Cerca</span>
+                          <button class="btn-close white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="search-form search-block-form form-row" accept-charset="UTF-8" id="search-block-form-modal" method="get" action="https://www.units.it/search/google">
+                            <fieldset class="js-form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+                              <p>
+                                <label class="visually-hidden" for="edit-keys">Campo cerca</label>
+                                <input class="form-search form-control" placeholder="Cerca nel portale" maxlength="128" size="15" value="" name="keys" id="edit-keys-modal" type="search" data-drupal-selector="edit-keys" title="Inserisci i termini da cercare.">
+                              </p>
+                            </fieldset>
+                            <div class="form-actions js-form-wrapper form-wrapper" id="edit-actions" data-drupal-selector="edit-actions">
+                              <button class="button js-form-submit form-submit btn" value="Cerca" id="edit-submit" type="submit" data-drupal-selector="edit-submit">Cerca</button>
+                            </div>
+                          </form>
+                          <ul class="modal-links ps-4 ps-md-5">
+                            <li><a class="modal-links__link-arrow" href="https://www.units.it/search/abook" target="_blank" rel="noopener noreferrer">Vai all'address book</a></li>
+                            <li><a class="modal-links__link-arrow" href="https://www.units.it/search/google" target="_blank" rel="noopener noreferrer">Vai su Google <em>(units.it)</em></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+            
+          </div>
+  </nav>
+		<nav class="navbar blu navbar-expand-lg" id="navbar-main">
+		<div class="container">
+			
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--header.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-site-branding.html.twig
+   ✅ block--system-branding-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-branding-block.html.twig' -->
+<div id="block-logo100" class="block-content-basic block block-block-content">
+  <div class="content">
+    <a href="/" title="Home" rel="home" class="navbar-brand">
+        <img src="/themes/custom/units_base/logo.svg" alt="logo università trieste" width="338" height="114" />
+    </a>
+  </div>
+</div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-branding-block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+      <nav role="navigation" aria-label="Menù social" id="block-menusocial-3" class="block block-menu navigation menu--menu-social">
+        <ul data-region="header" class="clearfix menu menu-level-0">
+          <li class="menu-item">
+            <a href="https://www.instagram.com/unitrieste/" title="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-06/instagram.svg" alt="Instagram" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="https://www.facebook.com/universitatrieste" title="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-06/Icon%20awesome-facebook.svg" alt="Facebook" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="https://www.linkedin.com/school/universitadeglistudiditrieste/" title="Linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-06/Icon%20awesome-linkedin.svg" alt="Linkedin" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="https://www.youtube.com/user/UniversitaTrieste" title="Youtube" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-06/Icon%20awesome-youtube.svg" alt="Youtube" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="https://twitter.com/UniTrieste" title="X" target="_blank" rel="noopener noreferrer">X</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-09/x-twitter.svg" alt="twitter" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="https://www.threads.net/@unitrieste" title="Threads" target="_blank" rel="noopener noreferrer">Threads</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2024-04/threads-icon.svg" alt="icona Threads" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="/it/feed" title="Rss" data-drupal-link-system-path="node/143">Rss</a>
+            <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                <img loading="lazy" src="/sites/default/files/2023-07/rss.svg" alt="feed rss" typeof="foaf:Image">
+              </div>
+            </div>
+          </li>
+        </ul>
+			</nav>
+      <div class="collapse navbar-collapse justify-content-end full-width" id="CollapsingNavbar">
+        <div class="container-fluid container-md">
+          <button class="navbar-toggler btn-hamburger btn-hamburger--open" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="true" aria-label="Close main menu" title="Chiudi">
+            <span class="hamburger-box"> <span class="hamburger-inner"></span></span>
+          </button>
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--primary-menu.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-main-menu.html.twig
+   ✅ block--system-menu-block--main.html.twig
+   ▪️ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--main.html.twig' -->
+
+<section class="row region region-main-nav">
+  <nav id="block-units-base-navigazioneprincipale" class="d-none d-lg-block block block-menu navigation menu--main" role="navigation" aria-label="Navigazione principale">
+                      <h2 class="visually-hidden" id="block-units-base-main-menu-menu">Navigazione principale</h2>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__main' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ menu--main.html.twig
+   ✅ menu--main.html.twig
+   ▪️ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--main.html.twig' -->
+
+              <ul class="clearfix navnavbar-nav nav">
+                    <li class="nav-item">
+                          <a href="https://portale.units.it/it/ateneo" class="nav-link nav-link-https--portaleunitsit-it-ateneo">Ateneo</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/studiare" class="nav-link nav-link-https--portaleunitsit-it-studiare">Studiare</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/ricerca" class="nav-link nav-link-https--portaleunitsit-it-ricerca">Ricerca</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/terza-missione" class="nav-link nav-link-https--portaleunitsit-it-terza-missione">Impegno sociale</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/internazionale" class="nav-link nav-link-https--portaleunitsit-it-internazionale">Internazionale</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/servizi" class="nav-link nav-link-https--portaleunitsit-it-servizi">Servizi</a>
+              </li>
+        </ul>
+  
+
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--main.html.twig' -->
+
+
+      </nav>
+</section>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--main.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+                  </div>
+      </div>
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--primary-menu.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-main-menu.html.twig
+   ✅ block--system-menu-block--main.html.twig
+   ▪️ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--main.html.twig' -->
+
+<section class="row region region-main-nav">
+  <nav id="block-units-base-navigazioneprincipale" class="d-none d-lg-block block block-menu navigation menu--main" role="navigation" aria-label="Navigazione principale">
+                      <h2 class="visually-hidden" id="block-units-base-main-menu--2-menu">Navigazione principale</h2>
+              
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__main' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ menu--main.html.twig
+   ✅ menu--main.html.twig
+   ▪️ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--main.html.twig' -->
+
+              <ul class="clearfix navnavbar-nav nav">
+                    <li class="nav-item">
+                          <a href="https://portale.units.it/it/ateneo" class="nav-link nav-link-https--portaleunitsit-it-ateneo">Ateneo</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/studiare" class="nav-link nav-link-https--portaleunitsit-it-studiare">Studiare</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/ricerca" class="nav-link nav-link-https--portaleunitsit-it-ricerca">Ricerca</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/terza-missione" class="nav-link nav-link-https--portaleunitsit-it-terza-missione">Impegno sociale</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/internazionale" class="nav-link nav-link-https--portaleunitsit-it-internazionale">Internazionale</a>
+              </li>
+                <li class="nav-item">
+                          <a href="https://portale.units.it/it/servizi" class="nav-link nav-link-https--portaleunitsit-it-servizi">Servizi</a>
+              </li>
+        </ul>
+  
+
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--main.html.twig' -->
+
+
+      </nav>
+</section>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/block/block--system-menu-block--main.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+		</div>
+	</nav>
+    </header>
+          <div class="highlighted">
+        <aside class="container section clearfix" role="complementary">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--highlighted.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-page-title.html.twig
+   ▪️ block--page-title-block.html.twig
+   ▪️ block--core.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+<div id="block-units-base-page-title" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page_title' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/content/page-title.html.twig' -->
+
+	<h1 class="title-page__title">Pagina non trovata</h1>
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/content/page-title.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-messages.html.twig
+   ✅ block--system-messages-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+<div data-drupal-messages-fallback class="hidden"></div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/block--system-messages-block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+        </aside>
+      </div>
+            <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      	<div id="main" class="container">
+		
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--breadcrumb.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-breadcrumbs.html.twig
+   ▪️ block--system-breadcrumb-block.html.twig
+   ▪️ block--system.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+<div id="block-units-base-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'breadcrumb' -->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/breadcrumb.html.twig' -->
+
+  <!-- 🥮 Component start: bootstrap_barrio:breadcrumb --><nav role="navigation" aria-label="breadcrumb" style="">
+  <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+        </ol>
+</nav>
+<!-- 🥮 Component end: bootstrap_barrio:breadcrumb -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/breadcrumb.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+		<div class="row row-offcanvas row-offcanvas-left clearfix">
+			<main class="main-content col" id="content" role="main">
+				<section class="section">
+					<a href="#main-content" id="main-content" tabindex="-1"></a>
+					
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ region--nowrap.html.twig
+   ▪️ region--content.html.twig
+   ▪️ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-content.html.twig
+   ▪️ block--system-main-block.html.twig
+   ▪️ block--system.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+<div id="block-units-base-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      La pagina richiesta non è stata trovata.
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region--nowrap.html.twig' -->
+
+
+				</section>
+			</main>
+								</div>
+	</div>
+    </div>
+        <footer class="site-footer">
+      	<div class="container">
+							<div class="site-footer__bottom">
+				
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-fifth.html.twig
+   ✅ region.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region.html.twig' -->
+  <section class="row region region-footer-fifth">
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--logocontatti-2.html.twig
+   ▪️ block--block-content--31fb64ae-454a-446b-8564-90760ddbe101.html.twig
+   ▪️ block--block-content--id-view--logocontatti-2--full.html.twig
+   ▪️ block--block-content--id--logocontatti-2.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+<div id="block-logocontatti-2" class="block-content-basic block block-block-content block-block-content31fb64ae-454a-446b-8564-90760ddbe101">
+  
+    
+      <div class="content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ✅ field--text-with-summary.html.twig
+   ▪️ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/field/field--text-with-summary.html.twig' -->
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="white"><img src="/themes/custom/units_base/images/logo_footer.svg" alt="logo footer" width="210" height="71" loading="lazy"> &nbsp;&nbsp;&nbsp;&nbsp;<br>Piazzale Europa, 1 - 34127 - Trieste, Italia -&nbsp;&nbsp;&nbsp;<br>Tel. +39 040 558 7111 - P.IVA 00211830328&nbsp;&nbsp;<br>C.F. 80013890324 - P.E.C. ateneo@pec.units.it</p></div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/field/field--text-with-summary.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--logocontattimobile-2.html.twig
+   ▪️ block--block-content--52b67ba4-a2c7-4bd7-a608-f395b07e0b37.html.twig
+   ▪️ block--block-content--id-view--logocontattimobile-2--full.html.twig
+   ▪️ block--block-content--id--logocontattimobile-2.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+<div id="block-logocontattimobile-2" class="block-content-basic block block-block-content block-block-content52b67ba4-a2c7-4bd7-a608-f395b07e0b37">
+  
+    
+      <div class="content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ✅ field--text-with-summary.html.twig
+   ▪️ field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/field/field--text-with-summary.html.twig' -->
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="white">Piazzale Europa, 1 - 34127 - Trieste, Italia -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Tel. +39 040 558 7111 - P.IVA 00211830328&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>C.F. 80013890324 - P.E.C. ateneo@pec.units.it&nbsp;&nbsp;&nbsp;<br><br><img src="/themes/custom/units_base/images/logo_footer.svg" alt="logo footer" width="210" height="71" loading="lazy" typeof="Image"></p></div>
+      
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/field/field--text-with-summary.html.twig' -->
+
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--menucontatti-2.html.twig
+   ▪️ block--system-menu-block--menu-contatti.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-menucontatti-2-menu" id="block-menucontatti-2" class="block block-menu navigation menu--menu-contatti">
+            
+  <h2 class="visually-hidden" id="block-menucontatti-2-menu">Menu contatti</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_contatti' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--menu-contatti.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+<!-- 🥣 Component start: bootstrap_barrio:menu -->
+                  <ul class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://portale.units.it/it/ateneo/campus" class="nav-link nav-link-https--portaleunitsit-it-ateneo-campus">Dove siamo</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.units.it/feedback" class="nav-link nav-link-https--wwwunitsit-feedback">Scrivici</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/urp" class="nav-link nav-link-https--portaleunitsit-it-urp">URP</a>
+              </li>
+        </ul>
+  
+
+<!-- 🥣 Component end: bootstrap_barrio:menu -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--units-base-menuorganizzazione.html.twig
+   ▪️ block--system-menu-block--menu-organizzazione.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-units-base-menuorganizzazione-menu" id="block-units-base-menuorganizzazione" class="block block-menu navigation menu--menu-organizzazione">
+            
+  <h2 class="visually-hidden" id="block-units-base-menuorganizzazione-menu">Menu organizzazione</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_organizzazione' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--menu-organizzazione.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+<!-- 🥣 Component start: bootstrap_barrio:menu -->
+                  <ul class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://www.units.it/ateneo/albo" class="nav-link nav-link-https--wwwunitsit-ateneo-albo">Albo ufficiale</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.units.it/operazionetrasparenza" class="nav-link nav-link-https--wwwunitsit-operazionetrasparenza">Amministrazione trasparente</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/ateneo/lavora-con-noi" class="nav-link nav-link-https--portaleunitsit-it-ateneo-lavora-con-noi">Lavora con noi</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://web.units.it/gare-appalto" class="nav-link nav-link-https--webunitsit-gare-appalto">Gare d&#039;appalto</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/aste-immobiliari" class="nav-link nav-link-https--portaleunitsit-it-aste-immobiliari">Aste immobiliari</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/sites/default/files/2024-01/codici_fatturazione_eletttonica_0.pdf" class="nav-link nav-link-https--portaleunitsit-sites-default-files-2024-01-codici-fatturazione-eletttonica-0pdf">Fatturazione elettronica</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.units.it/intra/coordinate" class="nav-link nav-link-https--wwwunitsit-intra-coordinate">Modalità di pagamento</a>
+              </li>
+        </ul>
+  
+
+<!-- 🥣 Component end: bootstrap_barrio:menu -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--menuportale-2.html.twig
+   ▪️ block--system-menu-block--menu-portale.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-menuportale-2-menu" id="block-menuportale-2" class="block block-menu navigation menu--menu-portale">
+            
+  <h2 class="visually-hidden" id="block-menuportale-2-menu">Menu portale</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_portale' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--menu-portale.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+<!-- 🥣 Component start: bootstrap_barrio:menu -->
+                  <ul class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://www.units.it/search/abook/" class="nav-link nav-link-https--wwwunitsit-search-abook-">Address Book</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/ateneo/immagine-coordinata" class="nav-link nav-link-https--portaleunitsit-it-ateneo-immagine-coordinata">Immagine Coordinata di Ateneo</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/servizi/servizi-digitali" class="nav-link nav-link-https--portaleunitsit-it-servizi-servizi-digitali">Servizi online</a>
+              </li>
+        </ul>
+  
+
+<!-- 🥣 Component end: bootstrap_barrio:menu -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--menusocial-2.html.twig
+   ▪️ block--system-menu-block--menu-social.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-menusocial-2-menu" id="block-menusocial-2" class="block block-menu navigation menu--menu-social">
+            
+  <h2 class="visually-hidden" id="block-menusocial-2-menu">Menu social</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_social' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ menu--menu-social.html.twig
+   ✅ menu--menu-social.html.twig
+   ▪️ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--menu-social.html.twig' -->
+
+                  <ul class="clearfix  menu  menu-level-0">
+                    <li class="nav-item">
+                <a href="https://www.instagram.com/unitrieste/" title="Instagram" class="nav-link nav-link-https--wwwinstagramcom-unitrieste-">Instagram</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.facebook.com/universitatrieste" title="Facebook" class="nav-link nav-link-https--wwwfacebookcom-universitatrieste">Facebook</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.linkedin.com/school/universitadeglistudiditrieste/" title="Linkedin" class="nav-link nav-link-https--wwwlinkedincom-school-universitadeglistudiditrieste-">LinkedIn</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.youtube.com/user/UniversitaTrieste" title="Youtube" class="nav-link nav-link-https--wwwyoutubecom-user-universitatrieste">YouTube</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://twitter.com/UniTrieste" title="X" class="nav-link nav-link-https--twittercom-unitrieste">X</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://www.threads.net/@unitrieste" title="Threads" class="nav-link nav-link-https--wwwthreadsnet-unitrieste">Threads</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/feed" title="Rss" class="nav-link nav-link-https--portaleunitsit-it-feed">Rss</a>
+              </li>
+        </ul>
+  
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/navigation/menu--menu-social.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--menuriferimenti-2.html.twig
+   ▪️ block--system-menu-block--menu-riferimenti.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-menuriferimenti-2-menu" id="block-menuriferimenti-2" class="block block-menu navigation menu--menu-riferimenti">
+            
+  <h2 class="visually-hidden" id="block-menuriferimenti-2-menu">Menù riferimenti</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__menu_riferimenti' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--menu-riferimenti.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+<!-- 🥣 Component start: bootstrap_barrio:menu -->
+                  <ul class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://portale.units.it/it/accessibilita" class="nav-link nav-link-https--portaleunitsit-it-accessibilita">Accessibilità</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://gdpr.unityfvg.it/" class="nav-link nav-link-https--gdprunityfvgit-">Privacy</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/social-media-policy" class="nav-link nav-link-https--portaleunitsit-it-social-media-policy">Social Media policy</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it#editCookieSettings" class="nav-link nav-link-https--portaleunitsit-iteditcookiesettings">Cookie</a>
+              </li>
+        </ul>
+  
+
+<!-- 🥣 Component end: bootstrap_barrio:menu -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--quicklinks-2.html.twig
+   ▪️ block--system-menu-block--quick-links.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+<nav role="navigation" aria-labelledby="block-quicklinks-2-menu" id="block-quicklinks-2" class="block block-menu navigation menu--quick-links">
+            
+  <h2 class="visually-hidden" id="block-quicklinks-2-menu">Quick links</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__quick_links' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--quick-links.html.twig
+   ✅ menu.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+<!-- 🥣 Component start: bootstrap_barrio:menu -->
+                  <ul class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://portale.units.it/it/ateneo/sostieni-units" class="nav-link nav-link-https--portaleunitsit-it-ateneo-sostieni-units">Sostieni UniTS</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://portale.units.it/it/store" class="nav-link nav-link-https--portaleunitsit-it-store">Store UniTS</a>
+              </li>
+        </ul>
+  
+
+<!-- 🥣 Component end: bootstrap_barrio:menu -->
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/navigation/menu.html.twig' -->
+
+
+  </nav>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/block/block--system-menu-block.html.twig' -->
+
+
+  </section>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/region.html.twig' -->
+
+
+			</div>
+			</div>
+    </footer>
+  </div>
+</div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/units_base/templates/layout/page.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/modules/system/templates/off-canvas-page-wrapper.html.twig' -->
+
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"it"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ckeditorAccordion":{"accordionStyle":{"collapseAll":0,"keepRowsOpen":0,"animateAccordionOpenAndClose":1,"openTabsWithHash":1,"allowHtmlInTitles":1}},"user":{"uid":0,"permissionsHash":"fb19ee0b93c4a1d489e7ef3871c61e68dfd54ff156fecf4b03bfbbd063134c37"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/sites/default/files/languages/it_d0hbkWKoUzNDBBvPjQXjzaHMnpKAkViGszlu1RKzbOQ.js?t7ctp0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.5.8"></script>
+<script src="/core/misc/drupal.js?v=10.5.8"></script>
+<script src="/core/misc/drupal.init.js?v=10.5.8"></script>
+<script src="/libraries/bootstrap/dist/js/bootstrap.bundle.min.js?t7ctp0"></script>
+<script src="/themes/contrib/bootstrap_barrio/js/barrio.js?v=10.5.8"></script>
+<script src="/modules/contrib/ckeditor_accordion/js/accordion.frontend.min.js?t7ctp0"></script>
+<script src="/core/misc/debounce.js?v=10.5.8"></script>
+<script src="/core/misc/form.js?v=10.5.8"></script>
+<script src="/themes/custom/units_base/js/global.js?v=10.5.8"></script>
+<script src="/themes/custom/units_base/libraries/splide/dist/js/splide.min.js?v=4.1.3"></script>
+
+  </body>
+</html>
+
+<!-- END OUTPUT from 'themes/contrib/bootstrap_barrio/templates/layout/html.html.twig' -->
+

@@ -1,0 +1,127 @@
+.collapse-text-details {
+  margin: 24px 0;
+}
+
+.collapse-text-details summary {
+  display: flex;
+  align-items: center;
+  overflow-anchor: none;
+  background: #007185;
+  padding: 1rem;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 32px;
+  font-size: 22px;
+}
+
+.collapse-text-details summary::after {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg) brightness(103%) contrast(103%);
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform .2s ease-in-out;
+}
+
+.collapse-text-details summary[aria-expanded="true"]::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg)
+}
+
+.collapse-text-details .details-wrapper {
+  border: 1px solid #d5d9d9;
+  padding: 1em 2.2em;
+}
+
+.ckeditor-accordion-container>dl {
+  border: 0;
+}
+
+.paragraph--type--ut-accordion {
+  margin: 2rem 0;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+.ckeditor-accordion-container>dl dt:not(.active),
+.ckeditor-accordion-container>dl dd.active {
+  margin-bottom: 1rem;
+}
+
+
+.accordion-item .accordion-header,
+.ckeditor-accordion-toggler {
+  background-color: var(#007185);
+}
+
+.ckeditor-accordion-container>dl dt>a,
+.ckeditor-accordion-container>dl dt>a:not(.button) {
+  padding: 10px 35px 10px 25px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ckeditor-accordion-container>dl dt>a,
+.ckeditor-accordion-container>dl dt>a:hover {
+  text-decoration: none;
+}
+
+.ckeditor-accordion-container>dl dt.active>a,
+.ckeditor-accordion-container>dl dt>a:hover,
+.ckeditor-accordion-container>dl dt>a:not(.button):hover,
+.ckeditor-accordion-container>dl dt>a,
+.ckeditor-accordion-container>dl dt>a:not(.button) {
+  background-color: #007185;
+  border: 0;
+}
+
+.ckeditor-accordion-container>dl dt>a>.ckeditor-accordion-toggle {
+  left: inherit;
+  right: 12px;
+}
+
+.accordion {
+  border: 0;
+}
+
+.accordion-header .accordion-button {
+  font-size: 24px;
+  border: 0;
+  font-weight: 400;
+}
+
+.accordion-header .accordion-button:hover {
+  text-decoration: none;
+}
+
+.accordion-collapse,
+.ckeditor-accordion-container>dl dd {
+  background: #fff;
+  margin-top: -15px;
+  padding-top: 15px;
+  box-shadow: var(--ut-box-shadow);
+}
+
+.ckeditor-accordion-container>dl dd {
+  padding: 24px 24px 12px;
+}
+
+.accordion-header .accordion-button::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='hsl(0deg, 0%, 100%)' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
+  transform: scaleY(-1);
+}
+
+.accordion-header .accordion-button:not(.collapsed)::after {
+  transform: scaleY(1);
+}
+
+.field.field--name-field-blocco-content .ckeditor-accordion-container {
+  color: var(--bs-body-color);
+}

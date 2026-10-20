@@ -1,0 +1,20 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ut_gc_lite
+id: ut_gc_lite_breadcrumbs
+theme: ut_gc_lite
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumb
+  label_display: '0'
+  provider: system
+visibility: {  }
+

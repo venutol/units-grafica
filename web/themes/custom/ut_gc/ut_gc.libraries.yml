@@ -1,0 +1,30 @@
+bootstrap:
+  version: '5.1.3'
+  css:
+    base:
+      libraries/bootstrap/css/bootstrap.min.css: { minified: true }
+  js:
+    libraries/bootstrap/js/bootstrap.bundle.min.js: { minified: true }
+
+font:
+  version: '1.0'
+  css:
+    theme:
+      css/titillium-web.css: {}
+
+# CSS della grafica coordinata, copiati da units_base (onlineforms su units117)
+# con i percorsi assoluti riscritti in relativi.
+global-styling:
+  version: VERSION
+  css:
+    component:
+      css/gc/style.css: {}
+      css/gc/style-override.css: {}
+      css/gc/colors.css: {}
+      css/gc/sidebar.css: {}
+      css/gc/accordion.css: {}
+    theme:
+      css/gc/units.css: {}
+      css/gc/nosass.css: {}
+      css/gc/post-bootstrap5.css: {}
+      css/ut-gc.css: {}

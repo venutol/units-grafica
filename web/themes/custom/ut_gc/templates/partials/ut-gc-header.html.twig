@@ -1,0 +1,201 @@
+{#
+/**
+ * @file
+ * Header della grafica coordinata UniTS.
+ *
+ * Stesso markup (id e classi) dell'header del JSON grafica-coordinata, così da
+ * usare i CSS originali di units_base. Posizioni fisse, contenuti da Drupal.
+ *
+ * Variabili:
+ * - gc: impostazioni del tema (vedi _ut_gc_settings()).
+ * - menus: voci dei menu gc-* e main (title, href, attributes, below).
+ * - language_links: link per il cambio lingua, se attivato e il sito è multilingue.
+ * - regions: regioni opzionali top_header, top_header_form, header, header_form.
+ */
+#}
+{% macro link(item, classes) %}
+  <a href="{{ item.href }}"{{ create_attribute(item.attributes).addClass(classes) }}>{{ item.title }}</a>
+{% endmacro %}
+{% import _self as gc_links %}
+
+<header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+  <nav class="navbar" id="navbar-top">
+    <div class="container">
+      {% if menus.info_per %}
+        <section class="row region region-secondary-menu">
+          <nav role="navigation" aria-labelledby="block-menutarget-menu" id="block-menutarget" class="menu-target block block-menu navigation menu--menu-target d-none d-md-block">
+            <h2 class="visually-hidden" id="block-menutarget-menu">{{ gc.info_per_label }}</h2>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ gc.info_per_label }}
+              </button>
+              <ul class="clearfix dropdown-menu">
+                {% for item in menus.info_per %}
+                  <li class="nav-item">
+                    {{ gc_links.link(item, ['nav-link', 'nav-link-' ~ item.href|clean_class]) }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </nav>
+        </section>
+      {% endif %}
+      <button class="d-block d-lg-none navbar-toggler collapsed btn-hamburger--close" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}" title="{{ 'Menu'|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="form-inline navbar-form ml-auto">
+        <section class="row region region-top-header-form">
+          {% if language_links %}
+            <div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+              <div class="content">
+                <nav class="links nav links-inline" aria-label="{{ 'Language selection menu'|t }}">
+                  {% for language in language_links %}
+                    <span class="nav-link"><a href="{{ language.href }}" class="language-link{{ language.active ? ' is-active' }}" title="{{ language.title }}" hreflang="{{ language.langcode }}"{% if language.active %} aria-current="page"{% endif %}>{{ language.label }}</a></span>
+                  {% endfor %}
+                </nav>
+              </div>
+            </div>
+          {% endif %}
+          <nav role="navigation" aria-label="{{ 'Service menu'|t }}" id="block-units-base-menudiservizio" class="menu--utility d-none d-lg-block block block-menu navigation menu--menu-di-servizio">
+            <ul class="clearfix nav">
+              {% if gc.search_enabled %}
+                <li class="nav-item d-none d-xl-block">
+                  <button type="button" class="btn modal-btn white" data-bs-toggle="modal" data-bs-target="#ModalCenter" title="{{ 'Search'|t }}">
+                    <span class="visually-hidden">{{ 'Search'|t }}</span>
+                    <img src="{{ gc.theme_path }}/icons/lens_new.svg" alt="" class="search__icon--white" aria-hidden="true">
+                  </button>
+                </li>
+              {% endif %}
+              {% for item in menus.servizio %}
+                <li class="nav-item">
+                  {{ gc_links.link(item, ['nav-link', 'nav-link-' ~ item.href|clean_class]) }}
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          {% if gc.search_enabled %}
+            <div id="block-modalsearch" class="block-content-basic block block-block-content">
+              <div class="content">
+                <div class="modal modal-search fade" role="dialog" aria-modal="true" tabindex="-1" id="ModalCenter" aria-labelledby="ModalCenterTitle">
+                  <div class="modal-dialog">
+                    <div class="modal-content container">
+                      <div class="modal-header">
+                        <span class="modal-title visually-hidden" id="ModalCenterTitle">{{ 'Search'|t }}</span>
+                        <button class="btn-close white" type="button" data-bs-dismiss="modal" aria-label="{{ 'Close'|t }}"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="search-form search-block-form form-row" accept-charset="UTF-8" id="search-block-form-modal" method="get" action="{{ gc.search_action }}">
+                          <fieldset class="js-form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+                            <p>
+                              <label class="visually-hidden" for="edit-keys-modal">{{ 'Search field'|t }}</label>
+                              <input class="form-search form-control" placeholder="{{ gc.search_placeholder }}" maxlength="128" size="15" value="" name="{{ gc.search_param }}" id="edit-keys-modal" type="search" title="{{ 'Enter the terms you wish to search for.'|t }}">
+                            </p>
+                          </fieldset>
+                          <div class="form-actions js-form-wrapper form-wrapper">
+                            <button class="button js-form-submit form-submit btn" type="submit">{{ 'Search'|t }}</button>
+                          </div>
+                        </form>
+                        {% if gc.search_links %}
+                          <ul class="modal-links ps-4 ps-md-5">
+                            {% for search_link in gc.search_links %}
+                              <li><a class="modal-links__link-arrow" href="{{ search_link.href }}" target="_blank" rel="noopener noreferrer">{{ search_link.label }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </section>
+      </div>
+      {{ regions.top_header }}
+      {% if regions.top_header_form|render|trim %}
+        <div class="form-inline navbar-form float-right">
+          {{ regions.top_header_form }}
+        </div>
+      {% endif %}
+    </div>
+  </nav>
+
+  <nav class="navbar blu navbar-expand-lg" id="navbar-main">
+    <div class="container">
+      <div id="block-logo100" class="block-content-basic block block-block-content">
+        <div class="content">
+          {% set logo_img %}<img src="{{ gc.logo }}" alt="{{ gc.logo_alt }}"{% if gc.logo_width %} width="{{ gc.logo_width }}"{% endif %}{% if gc.logo_height %} height="{{ gc.logo_height }}"{% endif %}>{% endset %}
+          {% if gc.logo_url %}
+            <a href="{{ gc.logo_url }}" title="{{ gc.logo_title }}" rel="home" class="navbar-brand">{{ logo_img }}</a>
+          {% else %}
+            <span class="navbar-brand">{{ logo_img }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {{ regions.header }}
+      {% if menus.social %}
+        <nav role="navigation" aria-label="{{ 'Social menu'|t }}" id="block-menusocial-3" class="block block-menu navigation menu--menu-social">
+          <ul data-region="header" class="clearfix menu menu-level-0">
+            {% for item in menus.social %}
+              <li class="menu-item">
+                <a href="{{ item.href }}"{{ create_attribute(item.attributes).setAttribute('title', item.attributes.title ?? item.title).setAttribute('style', 'background-image: url(' ~ item.icon ~ ')') }}>{{ item.title }}</a>
+                <div class="menu_link_content menu-link-contentmenu-social view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+                  <div class="field field--name-field-icona field--type-entity-reference field--label-hidden field__item">
+                    <img loading="lazy" src="{{ item.icon }}" alt="{{ item.title }}">
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+      <div class="collapse navbar-collapse justify-content-end full-width" id="CollapsingNavbar">
+        <div class="container-fluid container-md">
+          <button class="navbar-toggler btn-hamburger btn-hamburger--open" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="true" aria-label="{{ 'Close main menu'|t }}" title="{{ 'Close'|t }}">
+            <span class="hamburger-box"> <span class="hamburger-inner"></span></span>
+          </button>
+          {% if menus.main %}
+            {{ gc_links.main_menu(menus.main, 'block-units-base-main-menu', 'block block-menu navigation menu--main') }}
+          {% endif %}
+          {% if regions.header_form|render|trim %}
+            <div class="form-inline navbar-form float-right">
+              {{ regions.header_form }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if menus.main %}
+        <section class="row region region-main-nav">
+          {{ gc_links.main_menu(menus.main, 'block-units-base-navigazioneprincipale', 'd-none d-lg-block block block-menu navigation menu--main') }}
+        </section>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+
+{#
+  Il menu principale compare due volte, come nell'originale: dentro il
+  collapse per il mobile e nella barra per il desktop.
+#}
+{% macro main_menu(items, id, classes) %}
+  {% import _self as gc_links %}
+  <nav id="{{ id }}" class="{{ classes }}" role="navigation" aria-labelledby="{{ id }}-menu">
+    <h2 class="visually-hidden" id="{{ id }}-menu">{{ 'Main navigation'|t }}</h2>
+    <ul class="clearfix navnavbar-nav nav">
+      {% for item in items %}
+        <li class="nav-item{{ item.below ? ' dropdown' }}">
+          {% if item.below %}
+            <a href="{{ item.href }}"{{ create_attribute(item.attributes).addClass(['nav-link', 'dropdown-toggle', 'nav-link-' ~ item.href|clean_class]).setAttribute('data-bs-toggle', 'dropdown').setAttribute('aria-expanded', 'false') }}>{{ item.title }}</a>
+            <ul class="dropdown-menu">
+              {% for child in item.below %}
+                <li class="dropdown-item">{{ gc_links.link(child, []) }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            {{ gc_links.link(item, ['nav-link', 'nav-link-' ~ item.href|clean_class]) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endmacro %}

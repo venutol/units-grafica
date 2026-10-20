@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-riferimenti
+label: 'Grafica coordinata: footer riferimenti'
+description: "Footer, accessibilità e policy."
+locked: false

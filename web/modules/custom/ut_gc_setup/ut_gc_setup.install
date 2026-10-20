@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Popola i menu della grafica coordinata con i link attuali.
+ *
+ * Fonte: header e footer del JSON grafica-coordinata statico di onlineforms
+ * (units117, ottobre 2026). Dopo l'installazione i link si gestiscono da
+ * Struttura > Menu: questo file non viene più riletto.
+ */
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Link di default per menu: [titolo, url, attributi].
+ */
+function _ut_gc_setup_default_links(): array {
+  $blank = ['target' => '_blank', 'rel' => 'noopener noreferrer'];
+  return [
+    'gc-info-per' => [
+      ['Futuri studenti', 'https://portale.units.it/it/futuri-studenti'],
+      ['Studenti iscritti', 'https://portale.units.it/it/studenti-iscritti'],
+      ['Post lauream', 'https://portale.units.it/it/post-lauream'],
+      ['Studenti Internazionali', 'https://portale.units.it/it/studenti-internazionali'],
+      ['Enti e aziende', 'https://portale.units.it/it/enti-e-aziende'],
+      ['Territorio e società', 'https://portale.units.it/it/territorio-e-societa'],
+      ['Personale', 'https://www.units.it/personale'],
+    ],
+    'gc-servizio' => [
+      ['Rubrica', 'https://www.units.it/search/abook/', ['class' => ['menu-servizi__mail']] + $blank],
+      ['ACCEDI', 'https://portale.units.it/it/servizi/servizi-digitali', ['class' => ['accedi']]],
+    ],
+    'main' => [
+      ['Ateneo', 'https://portale.units.it/it/ateneo'],
+      ['Studiare', 'https://portale.units.it/it/studiare'],
+      ['Ricerca', 'https://portale.units.it/it/ricerca'],
+      ['Impegno sociale', 'https://portale.units.it/it/terza-missione'],
+      ['Internazionale', 'https://portale.units.it/it/internazionale'],
+      ['Servizi', 'https://portale.units.it/it/servizi'],
+    ],
+    'gc-social' => [
+      ['Instagram', 'https://www.instagram.com/unitrieste/', $blank],
+      ['Facebook', 'https://www.facebook.com/universitatrieste', $blank],
+      ['LinkedIn', 'https://www.linkedin.com/school/universitadeglistudiditrieste/', $blank],
+      ['YouTube', 'https://www.youtube.com/user/UniversitaTrieste', $blank],
+      ['X', 'https://twitter.com/UniTrieste', $blank],
+      ['Threads', 'https://www.threads.net/@unitrieste', $blank],
+      ['TikTok', 'https://www.tiktok.com/@unitrieste', $blank],
+      ['Rss', 'https://portale.units.it/it/feed'],
+    ],
+    'gc-contatti' => [
+      ['Dove siamo', 'https://portale.units.it/it/ateneo/campus'],
+      ['Scrivici', 'https://onlineforms.units.it/feedback'],
+      ['URP', 'https://portale.units.it/it/urp'],
+    ],
+    'gc-organizzazione' => [
+      ['Albo ufficiale', 'https://www.units.it/ateneo/albo'],
+      ['Amministrazione trasparente', 'https://www.units.it/operazionetrasparenza'],
+      ['Lavora con noi', 'https://portale.units.it/it/ateneo/lavora-con-noi'],
+      ["Gare d'appalto, aste immobiliari e fornitori", 'https://portale.units.it/it/node/3463'],
+      ['Fatturazione elettronica', 'https://portale.units.it/sites/default/files/2024-01/codici_fatturazione_eletttonica_0.pdf'],
+      ['Modalità di pagamento', 'https://www.units.it/intra/coordinate'],
+    ],
+    'gc-riferimenti' => [
+      ['Accessibilità', 'https://portale.units.it/it/accessibilita'],
+      ['Privacy Policy', 'https://www.units.it/informativa-privacy'],
+      ['Cookie Policy', 'https://www.units.it/informativa-cookie'],
+      ['Social Media policy', 'https://portale.units.it/it/social-media-policy'],
+    ],
+    'gc-portale' => [
+      ['Address Book', 'https://www.units.it/search/abook/'],
+      ['Immagine Coordinata di Ateneo', 'https://portale.units.it/it/ateneo/immagine-coordinata'],
+      ['Servizi online', 'https://portale.units.it/it/servizi/servizi-digitali'],
+    ],
+    'gc-quicklinks' => [
+      ['Sostieni UniTS', 'https://portale.units.it/it/ateneo/sostieni-units'],
+      ['Store UniTS', 'https://portale.units.it/it/store'],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_install().
+ */
+function ut_gc_setup_install($is_syncing) {
+  // In una sincronizzazione di configurazione i link (contenuto) arrivano
+  // con il database, non vanno ricreati.
+  if ($is_syncing) {
+    return;
+  }
+
+  // Il link "Home" del profilo standard non fa parte della grafica coordinata.
+  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+  if ($menu_link_manager->hasDefinition('standard.front_page')) {
+    $menu_link_manager->updateDefinition('standard.front_page', ['enabled' => FALSE]);
+  }
+
+  $storage = \Drupal::entityTypeManager()->getStorage('menu_link_content');
+  foreach (_ut_gc_setup_default_links() as $menu_name => $links) {
+    // Non tocca un menu che ha già dei link (es. il main di un sito esistente).
+    if ($storage->getQuery()->accessCheck(FALSE)->condition('menu_name', $menu_name)->count()->execute()) {
+      continue;
+    }
+    foreach ($links as $weight => $link) {
+      [$title, $uri, $attributes] = $link + [2 => []];
+      MenuLinkContent::create([
+        'title' => $title,
+        'link' => [
+          'uri' => $uri,
+          'options' => $attributes ? ['attributes' => $attributes] : [],
+        ],
+        'menu_name' => $menu_name,
+        'weight' => $weight,
+        'expanded' => FALSE,
+      ])->save();
+    }
+  }
+}

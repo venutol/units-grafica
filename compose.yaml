@@ -1,0 +1,45 @@
+# Ambiente di sviluppo locale, stesso schema wodby dei progetti units112.
+#   cp example.env .env && docker compose up -d
+#   http://localhost:${PROJECT_PORT}
+services:
+  database:
+    image: wodby/mariadb:$MARIADB_TAG
+    container_name: "${PROJECT_NAME}_mariadb"
+    stop_grace_period: 30s
+    environment:
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+    volumes:
+      - database_data:/var/lib/mysql
+
+  php:
+    image: wodby/drupal-php:$PHP_TAG
+    container_name: "${PROJECT_NAME}_php"
+    environment:
+      PHP_MEMORY_LIMIT: ${PHP_MEMORY_LIMIT}
+      DB_HOST: database
+      DB_NAME: $DB_NAME
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DRUSH_OPTIONS_URI: http://localhost:${PROJECT_PORT}
+    volumes:
+      - ./:/var/www/html:cached
+
+  apache:
+    image: wodby/apache:$APACHE_TAG
+    container_name: "${PROJECT_NAME}_apache"
+    ports:
+      - ${PROJECT_PORT}:80
+    depends_on:
+      - php
+    environment:
+      APACHE_BACKEND_HOST: php
+      APACHE_VHOST_PRESET: php
+      APACHE_DOCUMENT_ROOT: /var/www/html/web
+    volumes:
+      - ./:/var/www/html:cached
+
+volumes:
+  database_data:

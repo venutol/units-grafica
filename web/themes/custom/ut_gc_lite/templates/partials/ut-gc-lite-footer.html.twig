@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Footer Lite: logo e indirizzo dell'Ateneo, a destra la regione "footer".
+ *
+ * Variabili:
+ * - gc: impostazioni del tema (vedi _ut_gc_settings() in ut_gc.theme).
+ * - region: blocchi della regione footer (link del sito, contatti, …).
+ */
+#}
+{% set region_html = region|render %}
+<footer class="gc-lite-footer">
+  <div class="container gc-lite-footer__inner">
+    <div class="gc-lite-footer__identity">
+      <img class="gc-lite-footer__logo" src="{{ gc.footer_logo }}" alt="{{ gc.footer_logo_alt }}" width="150" height="51" loading="lazy">
+      <div class="gc-lite-footer__address">{{ gc.footer_address }}</div>
+    </div>
+    {% if region_html|striptags('<img><drupal-render-placeholder>')|trim %}
+      <div class="gc-lite-footer__region">{{ region_html }}</div>
+    {% endif %}
+  </div>
+</footer>

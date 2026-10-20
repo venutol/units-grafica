@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-quicklinks
+label: 'Grafica coordinata: footer quick links'
+description: "Footer, link in evidenza."
+locked: false

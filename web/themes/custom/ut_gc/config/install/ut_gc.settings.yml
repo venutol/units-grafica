@@ -1,0 +1,32 @@
+# Bootstrap è caricato dalla libreria del tema (ut_gc/bootstrap), non da Barrio.
+bootstrap_barrio_source: ''
+bootstrap_barrio_bootstrap_icons: 0
+bootstrap_barrio_messages_widget: 'alerts'
+bootstrap_barrio_container: 'container'
+
+# Header
+gc_logo_link: 'custom'
+gc_logo_url: 'https://www.units.it/'
+gc_logo_title: 'Home'
+gc_logo_alt: 'logo università trieste'
+gc_logo_width: 338
+gc_logo_height: 114
+gc_info_per_label: 'Info per'
+gc_language_switcher: false
+gc_search_enabled: true
+gc_search_action: 'https://www.units.it/search/google/'
+gc_search_param: 'q'
+gc_search_placeholder: 'Cerca in google (units.it)'
+gc_search_links: |-
+  Vai all'address book|https://www.units.it/search/abook
+  Vai su Google (units.it)|https://www.units.it/search/google
+
+# Footer
+gc_footer_logo_path: ''
+gc_footer_logo_alt: 'logo footer'
+gc_footer_address:
+  value: '<p>Piazzale Europa, 1 - 34127 - Trieste, Italia<br>Tel. +39 040 558 7111 - P.IVA 00211830328<br>C.F. 80013890324 - P.E.C. <a href="mailto:ateneo@pec.units.it">ateneo@pec.units.it</a></p>'
+  format: basic_html
+gc_anvur_enabled: true
+gc_anvur_label: 'Fascia A ANVUR'
+gc_anvur_url: 'https://portale.units.it/node/2341'

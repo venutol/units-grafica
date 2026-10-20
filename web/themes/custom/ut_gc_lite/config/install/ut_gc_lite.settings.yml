@@ -1,0 +1,22 @@
+gc_lite: true
+
+# Bootstrap è caricato dalla libreria del tema base (ut_gc/bootstrap), non da Barrio.
+bootstrap_barrio_source: ''
+bootstrap_barrio_bootstrap_icons: 0
+bootstrap_barrio_messages_widget: 'alerts'
+bootstrap_barrio_container: 'container'
+
+# Header: il logo porta alla home del sito.
+gc_logo_link: 'front'
+gc_logo_url: ''
+gc_logo_title: 'Home'
+gc_logo_alt: 'Università degli Studi di Trieste'
+gc_logo_width: 166
+gc_logo_height: 56
+
+# Footer
+gc_footer_logo_path: ''
+gc_footer_logo_alt: 'Università degli Studi di Trieste'
+gc_footer_address:
+  value: '<p>Piazzale Europa, 1 - 34127 - Trieste, Italia<br>Tel. +39 040 558 7111 - P.IVA 00211830328<br>C.F. 80013890324 - P.E.C. <a href="mailto:ateneo@pec.units.it">ateneo@pec.units.it</a></p>'
+  format: basic_html

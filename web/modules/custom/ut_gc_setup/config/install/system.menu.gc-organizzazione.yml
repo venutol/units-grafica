@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-organizzazione
+label: 'Grafica coordinata: footer organizzazione'
+description: "Footer, link istituzionali."
+locked: false

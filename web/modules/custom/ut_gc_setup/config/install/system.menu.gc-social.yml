@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-social
+label: 'Grafica coordinata: social'
+description: "Icone social nell'header e link social nel footer. L'icona si sceglie dal dominio del link."
+locked: false

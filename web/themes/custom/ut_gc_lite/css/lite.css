@@ -1,0 +1,125 @@
+/**
+ * @file
+ * Header e footer della variante Lite: compatti, stessi colori della
+ * grafica coordinata (#16355A).
+ */
+
+/* Su pagine corte il footer resta in fondo alla finestra. */
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#main-wrapper {
+  flex: 1 0 auto;
+}
+
+/* Header */
+.gc-lite-header {
+  background-color: #16355a;
+  color: #fff;
+}
+.gc-lite-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.gc-lite-header__logo {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.gc-lite-header__logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+.gc-lite-header__region,
+.gc-lite-header__region a {
+  color: #fff;
+}
+.gc-lite-header__region ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Footer */
+.gc-lite-footer {
+  background-color: #16355a;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+.gc-lite-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.gc-lite-footer__identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.gc-lite-footer__logo {
+  display: block;
+  flex-shrink: 0;
+  width: 150px;
+  height: auto;
+}
+.gc-lite-footer__address p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+.gc-lite-footer a {
+  color: #fff;
+}
+.gc-lite-footer a:hover,
+.gc-lite-footer a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+.gc-lite-footer__region h2 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #fff;
+}
+.gc-lite-footer__region ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gc-lite-footer__region .nav-link {
+  padding: 0;
+}
+
+@media (max-width: 575.98px) {
+  .gc-lite-header__inner {
+    min-height: 56px;
+  }
+  .gc-lite-header__logo img {
+    height: 44px;
+  }
+  .gc-lite-footer__identity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

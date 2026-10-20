@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Footer della grafica coordinata UniTS.
+ *
+ * Stesso markup del footer del JSON grafica-coordinata. Il blocco logo +
+ * indirizzo compare due volte (desktop e mobile), come nell'originale: il CSS
+ * mostra l'uno o l'altro.
+ *
+ * Variabili:
+ * - gc: impostazioni del tema (vedi _ut_gc_settings()).
+ * - menus: voci dei menu gc-* (title, href, attributes, below).
+ */
+#}
+{% macro footer_menu(items, id, menu_class, label) %}
+  {% if items %}
+    <nav role="navigation" aria-labelledby="{{ id }}-menu" id="{{ id }}" class="block block-menu navigation {{ menu_class }}">
+      <h2 class="visually-hidden" id="{{ id }}-menu">{{ label }}</h2>
+      <ul class="clearfix nav">
+        {% for item in items %}
+          <li class="nav-item">
+            <a href="{{ item.href }}"{{ create_attribute(item.attributes).addClass(['nav-link', 'nav-link-' ~ item.href|clean_class]) }}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endmacro %}
+{% import _self as gc_footer %}
+
+{% set footer_logo %}
+  <img src="{{ gc.footer_logo }}" alt="{{ gc.footer_logo_alt }}" width="210" height="71" loading="lazy">
+{% endset %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__bottom">
+      <section class="row region region-footer-fifth">
+        <div id="block-logocontatti-2" class="block-content-basic block block-block-content">
+          <div class="content">
+            <div class="clearfix text-formatted field field--name-body field--label-hidden field__item white">
+              <p class="white">{{ footer_logo }}</p>
+              {{ gc.footer_address }}
+            </div>
+          </div>
+        </div>
+        <div id="block-logocontattimobile-2" class="block-content-basic block block-block-content">
+          <div class="content">
+            <div class="clearfix text-formatted field field--name-body field--label-hidden field__item white">
+              {{ gc.footer_address }}
+              <p class="white">{{ footer_logo }}</p>
+            </div>
+          </div>
+        </div>
+        {% if gc.anvur_enabled and gc.anvur_label %}
+          <div id="block-units-base-fasciaanvur-2" class="block-content-basic block block-block-content">
+            <div class="content">
+              <div class="clearfix text-formatted field field--name-body field--label-hidden field__item">
+                <p><a href="{{ gc.anvur_url }}"><span>{{ gc.anvur_label }}</span><span class="icon"> <img src="{{ gc.theme_path }}/icons/award-solid-full.svg" alt=""></span></a></p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {{ gc_footer.footer_menu(menus.contatti, 'block-menucontatti-2', 'menu--menu-contatti', 'Menu contatti') }}
+        {{ gc_footer.footer_menu(menus.organizzazione, 'block-units-base-menuorganizzazione', 'menu--menu-organizzazione', 'Menu organizzazione') }}
+        {{ gc_footer.footer_menu(menus.riferimenti, 'block-menuriferimenti-2', 'menu--menu-riferimenti', 'Menu riferimenti') }}
+        {{ gc_footer.footer_menu(menus.portale, 'block-menuportale-2', 'menu--menu-portale', 'Menu portale') }}
+        {{ gc_footer.footer_menu(menus.quicklinks, 'block-quicklinks-2', 'menu--quick-links', 'Quick links') }}
+        {% if menus.social %}
+          <nav role="navigation" aria-labelledby="block-menusocial-2-menu" id="block-menusocial-2" class="block block-menu navigation menu--menu-social">
+            <h2 class="visually-hidden" id="block-menusocial-2-menu">Menu social</h2>
+            <ul class="clearfix menu menu-level-0">
+              {% for item in menus.social %}
+                <li class="nav-item">
+                  <a href="{{ item.href }}"{{ create_attribute(item.attributes).addClass(['nav-link', 'nav-link-' ~ item.href|clean_class]).setAttribute('title', item.attributes.title ?? item.title).setAttribute('style', 'background-image: url(' ~ item.icon ~ ')') }}>{{ item.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+      </section>
+    </div>
+  </div>
+</footer>

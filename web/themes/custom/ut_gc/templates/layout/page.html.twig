@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Pagina con header e footer della grafica coordinata UniTS.
+ *
+ * Header e footer arrivano da ut_gc_preprocess_page() come render array
+ * (gc_header, gc_footer). Il resto ricalca il page.html.twig di units_base.
+ *
+ * @see ut_gc_preprocess_page()
+ * @see bootstrap_barrio_preprocess_page()
+ */
+#}
+{# see https://www.drupal.org/project/drupal/issues/953034#comment-14192130 #}
+{% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
+{% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
+
+<div id="page-wrapper">
+  <div id="page">
+    {{ gc_header }}
+    {% if page.highlighted %}
+      <div class="highlighted">
+        <aside class="{{ container }} section clearfix" role="complementary">
+          {{ page.highlighted }}
+        </aside>
+      </div>
+    {% endif %}
+    {% if page.featured_top %}
+      <div class="featured-top">
+        <aside class="featured-top__inner section {{ container }} clearfix" role="complementary">
+          {{ page.featured_top }}
+        </aside>
+      </div>
+    {% endif %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      <div id="main" class="{{ container }}">
+        {{ page.breadcrumb }}
+        <div class="row row-offcanvas row-offcanvas-left clearfix">
+          <main{{ content_attributes }}>
+            <section class="section">
+              <a href="#main-content" id="main-content" tabindex="-1"></a>
+              {{ page.content }}
+            </section>
+          </main>
+          {% if sidebar_first_exists %}
+            <div{{ sidebar_first_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_first }}
+              </aside>
+            </div>
+          {% endif %}
+          {% if sidebar_second_exists %}
+            <div{{ sidebar_second_attributes }}>
+              <aside class="section menu-spalla" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+      <div class="featured-bottom">
+        <aside class="{{ container }} clearfix" role="complementary">
+          {{ page.featured_bottom_first }}
+          {{ page.featured_bottom_second }}
+          {{ page.featured_bottom_third }}
+        </aside>
+      </div>
+    {% endif %}
+    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+      <div class="{{ container }} site-footer__top clearfix">
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+        {{ page.footer_third }}
+        {{ page.footer_fourth }}
+      </div>
+    {% endif %}
+    {{ gc_footer }}
+  </div>
+</div>

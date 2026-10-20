@@ -1,0 +1,7 @@
+langcode: it
+status: true
+dependencies: {  }
+id: gc-portale
+label: 'Grafica coordinata: footer portale'
+description: "Footer, link al portale."
+locked: false
